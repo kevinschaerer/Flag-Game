@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your website description here">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+    <meta name="author" content="Kevin Schärer">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your Page Title">
+    <meta name="twitter:description" content="Your website description here">
+    <meta name="twitter:image" content="url_to_image.jpg">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <title>Leaderboard</title>
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script>
+</head>
+<body class="bg-black">
+    <header class="layout-base">
+        <div id="top-bar" class="gap-600">
+            <input id="display-name" type="text" placeholder="Display Name">
+            <button id="btn-submit-score" type="button" class="btn-primary">Submit</button>
+            <a class="navigation-back" href="/index.html">
+            <img class="back-icon" src="/assets/images/icon-chevron-left.svg" alt="icon of a chevron pointing to the left">
+            <p>Back</p>
+            </a>
+        </div>
+        <h1 class="gap-950">Scoreboard</h1>
+    </header>
+    <main>
+        <table id="leaderboard-container" class="layout-base gap-400">
+            <thead>
+            <tr class="leaderboard-columns">
+                <th class="column-heading">Rank</th>
+                <th class="column-heading column-user">User</th>
+                <th class="column-heading column-date">Date</th>
+                <th class="column-heading column-score">Score</th>
+                <th class="column-heading column-time">Time</th>
+            </tr>
+        </thead>
+        <tbody id="container-entries">
+        </tbody>
+        </table>
+   
+        <div class="pagination">
+            <div>
+            <button onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();" id="previous-page" class="btn-primary">Previous</button>
+            <button onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();" id="next-page" class="btn-primary">Next</button>
+        </div>
+        <div id="box-current-page">
+            <div id="current-page"></div>
+        </div>
+        </div>
+    </main>
+</body>
+<script type="module" src="../assets/js/main.js"></script>
+<script type="module" src="../assets/js/leaderboard.js"></script>
+</html>
