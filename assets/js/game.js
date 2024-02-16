@@ -1,7 +1,3 @@
-// Initialize supabase
-import {
-  supa
-} from '/assets/js/supa.js'
 
 
   // Initialize variables
