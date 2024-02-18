@@ -3,3 +3,4 @@
 .env*.local
 /assets/js/config.js
 vercel.json
+.DS_Store
